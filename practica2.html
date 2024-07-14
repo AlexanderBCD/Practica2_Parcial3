@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificación</title>
+</head>
+<body>
+    <script>
+        let nota = prompt("Introduce tu nota:");
+        if (nota !== null) {
+            nota = parseFloat(nota);
+            if (isNaN(nota)) {
+                alert("Por favor, introduce un número válido.");
+            } else {
+                let calificacion;
+                if (nota >= 9) {
+                    calificacion = "Sobresaliente";
+                } else if (nota >= 7) {
+                    calificacion = "Notable";
+                } else if (nota >= 5) {
+                    calificacion = "Aprobado";
+                } else {
+                    calificacion = "Suspenso";
+                }
+                alert("Tu calificación es: " + calificacion);
+            }
+        }
+    </script>
+</body>
+</html>

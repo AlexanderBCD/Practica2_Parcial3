@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Letra DNI</title>
+</head>
+<body>
+    <script>
+        const letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        while (true) {
+            let numero = prompt("Introduce el número del DNI (0 a 99999999) o pulsa cancelar para salir:");
+            if (numero === null) {
+                break;
+            }
+            numero = parseInt(numero);
+            if (isNaN(numero) || numero < 0 || numero > 99999999) {
+                alert("Por favor, introduce un número válido.");
+            } else {
+                let letra = letras[numero % 23];
+                alert("La letra correspondiente al DNI " + numero + " es " + letra);
+            }
+        }
+    </script>
+</body>
+</html>

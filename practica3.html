@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenar Cadenas</title>
+</head>
+<body>
+    <script>
+        let cadenas = [];
+        while (true) {
+            let cadena = prompt("Introduce una cadena de texto (pulsa cancelar para salir):");
+            if (cadena === null) {
+                break;
+            }
+            cadenas.push(cadena);
+        }
+        alert("Cadenas concatenadas: " + cadenas.join("-"));
+    </script>
+</body>
+</html>
